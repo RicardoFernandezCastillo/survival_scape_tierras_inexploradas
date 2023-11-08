@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 253624506}
   - component: {fileID: 253624507}
   m_Layer: 5
-  m_Name: HealthBarContainer (1)
+  m_Name: CaloriesBarContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2896,6 +2896,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1049537290}
+  - component: {fileID: 1049537292}
   - component: {fileID: 1049537291}
   m_Layer: 5
   m_Name: HealthBarContainer
@@ -4072,7 +4073,7 @@ GameObject:
   - component: {fileID: 1585572495}
   - component: {fileID: 1585572494}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: HealthCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4552,7 +4553,7 @@ GameObject:
   - component: {fileID: 1737741392}
   - component: {fileID: 1737741393}
   m_Layer: 5
-  m_Name: HealthBarContainer (2)
+  m_Name: HydrationBarContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
