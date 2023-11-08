@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 253624506}
   - component: {fileID: 253624507}
   m_Layer: 5
-  m_Name: HealthBarContainer (1)
+  m_Name: CaloriesBarContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1128,6 +1128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1049537290}
+  - component: {fileID: 1049537292}
   - component: {fileID: 1049537291}
   m_Layer: 5
   m_Name: HealthBarContainer
@@ -1208,6 +1209,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1049537292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049537289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9655282017fd4ea4192ca495fb2d5109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthCounter: {fileID: 0}
+  playerState: {fileID: 1435615450}
 --- !u!1 &1331013720
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,6 +1335,56 @@ RectTransform:
   m_AnchoredPosition: {x: 0.22149658, y: 0.00016021729}
   m_SizeDelta: {x: -0.44299, y: 0.333}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1435615450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1435615452}
+  - component: {fileID: 1435615451}
+  m_Layer: 0
+  m_Name: PlayerStateSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1435615451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435615450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b520231051d63624392c37ccff6d777e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 0
+  maxHealth: 100
+  currentCalories: 0
+  maxCalories: 2000
+  currentHydrationPercent: 0
+  maxHydrationPercent: 100
+--- !u!4 &1435615452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435615450}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 274.94812, y: 156.4878, z: 193.01904}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1541341369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,7 +1592,7 @@ GameObject:
   - component: {fileID: 1585572495}
   - component: {fileID: 1585572494}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: HealthCounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1757,7 +1822,7 @@ GameObject:
   - component: {fileID: 1737741392}
   - component: {fileID: 1737741393}
   m_Layer: 5
-  m_Name: HealthBarContainer (2)
+  m_Name: HydrationBarContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2059,3 +2124,4 @@ SceneRoots:
   - {fileID: 1619770123}
   - {fileID: 1980088627}
   - {fileID: 854591143}
+  - {fileID: 1435615452}
