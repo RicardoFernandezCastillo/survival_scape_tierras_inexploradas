@@ -22,7 +22,7 @@ public class hydrationBar : MonoBehaviour
     {
         currentHydration = playerState.GetComponent<playerState>().currentHydrationPercent;
         maxHydration = playerState.GetComponent<playerState>().maxHydrationPercent;
-        float fillValue = currentHydration / currentHydration;
+        float fillValue = currentHydration / maxHydration;
         slider.value = fillValue;
 
         hydrationCounter.text = currentHydration + "%";
