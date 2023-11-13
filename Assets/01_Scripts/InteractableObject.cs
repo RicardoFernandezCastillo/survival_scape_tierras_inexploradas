@@ -14,7 +14,7 @@ public class InterectableObject : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Mouse0) && playerRange && SelectionManager.Instance.onTarget)
+        if (Input.GetKeyUp(KeyCode.Mouse0) && playerRange && SelectionManager.Instance.onTarget && SelectionManager.Instance.selectedObject == gameObject)
         {
             if (!InventorySystem.Instance.CheckIfFull())
             {
