@@ -13,13 +13,7 @@ public class healthBar : MonoBehaviour
     public GameObject playerState;
 
     private float maxHealth, currentHealth;
-    void Awake()
-    private Slider slider; //Is not necesary 'cause GetComponent<Slider>
-    public TextMeshProUGUI healthCounter;
 
-    public GameObject playerState;
-
-    private float maxHealth, currentHealth;
     void Awake()
     {
         slider = GetComponent<Slider>();
