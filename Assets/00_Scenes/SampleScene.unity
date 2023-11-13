@@ -299,6 +299,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29075122}
   m_CullTransparentMesh: 1
+--- !u!1001 &70548804
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 120.00748
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 63.025913
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 6.123234e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000004371139
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 2.6765506e-24
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
+      propertyPath: m_Name
+      value: CocodriloWalk
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1854816426}
+  m_SourcePrefab: {fileID: 100100000, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
 --- !u!1 &91432542
 GameObject:
   m_ObjectHideFlags: 0
@@ -4804,6 +4864,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822328726}
   m_CullTransparentMesh: 1
+--- !u!1 &1854816425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 23ccf65a2df4205439f5f6e50d0d541d, type: 3}
+  m_PrefabInstance: {fileID: 70548804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1854816426
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854816425}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b1e223e2e3f99e6489f7d3c0934e0603, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1862986222
 GameObject:
   m_ObjectHideFlags: 0
@@ -5266,3 +5352,4 @@ SceneRoots:
   - {fileID: 460761746}
   - {fileID: 964824600}
   - {fileID: 1133493635}
+  - {fileID: 70548804}
