@@ -2254,6 +2254,81 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1174439222}
   m_SourcePrefab: {fileID: 100100000, guid: 2b76babe988e9834baa36f2eee499e95, type: 3}
+--- !u!1 &830883664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 830883666}
+  - component: {fileID: 830883665}
+  m_Layer: 0
+  m_Name: DayNightSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &830883665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830883664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c81e013409838d4ca5956727b3b5232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direcctionalLight: {fileID: 705507994}
+  dayDurationInSeconds: 24
+  currentHour: 0
+  timeMapping:
+  - phaseName: Night
+    hour: 0
+    skyboxMaterial: {fileID: 2100000, guid: 3f1e52dec055a3a4f850420ef19cb2b2, type: 2}
+  - phaseName: NightToSunrise
+    hour: 5
+    skyboxMaterial: {fileID: 2100000, guid: 88bb81e52c5636a4ba484f5b7991b041, type: 2}
+  - phaseName: Sunrise
+    hour: 7
+    skyboxMaterial: {fileID: 2100000, guid: eb8fd6bd252589744b602770b09ccbd7, type: 2}
+  - phaseName: SunriseToDay
+    hour: 9
+    skyboxMaterial: {fileID: 2100000, guid: ba75002daeb6521418ffa5609db3803c, type: 2}
+  - phaseName: Day
+    hour: 11
+    skyboxMaterial: {fileID: 2100000, guid: 94d852a7748a347489661febea5eafc6, type: 2}
+  - phaseName: DayToSunset
+    hour: 16
+    skyboxMaterial: {fileID: 2100000, guid: 70c57bd9580c62740b3682bbcdc4a71d, type: 2}
+  - phaseName: SunSet
+    hour: 18
+    skyboxMaterial: {fileID: 2100000, guid: a59fe87939f259d40a7ee37624c9568b, type: 2}
+  - phaseName: SunsetToNight
+    hour: 20
+    skyboxMaterial: {fileID: 2100000, guid: dda772dc4ef06f74e90d209f58656209, type: 2}
+  - phaseName: Night
+    hour: 22
+    skyboxMaterial: {fileID: 2100000, guid: 3f1e52dec055a3a4f850420ef19cb2b2, type: 2}
+--- !u!4 &830883666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830883664}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.944155, y: -29.63454, z: 40.224255}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &854591140
 GameObject:
   m_ObjectHideFlags: 0
@@ -5268,3 +5343,4 @@ SceneRoots:
   - {fileID: 611731012}
   - {fileID: 460761746}
   - {fileID: 964824600}
+  - {fileID: 830883666}
