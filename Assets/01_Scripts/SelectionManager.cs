@@ -12,6 +12,7 @@ public class SelectionManager : MonoBehaviour
     public GameObject selectedObject;
 
     public GameObject interaction_Info_UI;
+
     TextMeshProUGUI interaction_text;
 
     private void Start()
