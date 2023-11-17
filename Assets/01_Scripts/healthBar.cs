@@ -6,12 +6,14 @@ using UnityEngine.UI;
 
 public class healthBar : MonoBehaviour
 {
+    // Start is called before the first frame update
     private Slider slider; //Is not necesary 'cause GetComponent<Slider>
     public TextMeshProUGUI healthCounter;
 
     public GameObject playerState;
 
     private float maxHealth, currentHealth;
+
     void Awake()
     {
         slider = GetComponent<Slider>();
