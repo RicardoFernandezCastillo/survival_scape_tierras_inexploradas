@@ -19,6 +19,13 @@ public class playerMovement : MonoBehaviour
 
     bool isGrounded;
 
+
+    Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -48,5 +55,20 @@ public class playerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+
+
+
+
+        if (x!=0 || z!=0)
+        {
+
+            animator.SetBool("isMoving", true);
+
+
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
     }
 }

@@ -58,7 +58,7 @@ public class playerState : MonoBehaviour
         while (isHydrationActive)
         {
             currentHydrationPercent -= 1;
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(10);
         }
     }
 
