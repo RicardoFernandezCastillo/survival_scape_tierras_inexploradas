@@ -83,4 +83,19 @@ public class playerState : MonoBehaviour
         }
 
     }
+
+    internal void setHealth(float maxHealth)
+    {
+        currentHealth += maxHealth;
+    }
+
+    internal void setCalories(float maxCalories)
+    {
+        currentCalories += maxCalories;
+    }
+
+    internal void setHydration(float maxHydration)
+    {
+        currentHydrationPercent += maxHydration;
+    }
 }

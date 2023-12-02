@@ -18,11 +18,13 @@ public class CraftingSystem : MonoBehaviour
     Button toolsBtn;
     Button craftBtn;
 
+
     TextMeshProUGUI AxeReq1, AxeReq2;
+    TextMeshProUGUI SwordReq1, SwordReq2;
 
     public bool isOpen;
 
-    public Blueprint AxeBlp = new Blueprint("Axe",2,"Stone",3,"Stick",3);
+    
 
     private void Awake()
     {
@@ -36,6 +38,9 @@ public class CraftingSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Blueprint AxeBlp = new Blueprint("Axe", 2, "Stone", 3, "Stick", 2);
+        Blueprint SwordBlp = new Blueprint("Sword", 2, "Stone", 2, "Stick", 1);
+
         isOpen = false;
         toolsBtn = craftingScreenUI.transform.Find("ToolsButton").GetComponent<Button>();
         toolsBtn.onClick.AddListener(delegate { OpenToolsCategory();});
@@ -47,11 +52,20 @@ public class CraftingSystem : MonoBehaviour
 
         craftBtn = toolsScreenUI.transform.Find("Axe").transform.Find("Button").GetComponent<Button>();
         craftBtn.onClick.AddListener(delegate { CraftAnyItem(AxeBlp); });
-        
+
+        SwordReq1 = toolsScreenUI.transform.Find("Sword").transform.Find("req1").GetComponent<TextMeshProUGUI>();
+        SwordReq2 = toolsScreenUI.transform.Find("Sword").transform.Find("req2").GetComponent<TextMeshProUGUI>();
+
+        craftBtn = toolsScreenUI.transform.Find("Sword").transform.Find("Button").GetComponent<Button>();
+        craftBtn.onClick.AddListener(delegate { CraftAnyItem(SwordBlp); });
+
     }
 
     public void CraftAnyItem(Blueprint blueprintToCraft)
     {
+
+        Debug.Log("Crafteo");
+
         InventorySystem.Instance.AddToInventory(blueprintToCraft.itemName);
         if(blueprintToCraft.numOfRequirements == 1)
         {
@@ -65,7 +79,6 @@ public class CraftingSystem : MonoBehaviour
 
 
         StartCoroutine(calculate());
-
         RefreshNeededItems();
     }
 
@@ -104,7 +117,7 @@ public class CraftingSystem : MonoBehaviour
         }
     }
 
-    private void RefreshNeededItems()
+    public void RefreshNeededItems()
     {
         int stone_count = 0;
         int stick_count = 0;
@@ -116,7 +129,6 @@ public class CraftingSystem : MonoBehaviour
             switch (item)
             {
                 case "Stone":
-                    Debug.Log(item);
                     stone_count += 1;
                     break;
                 case "Stick":
@@ -126,12 +138,19 @@ public class CraftingSystem : MonoBehaviour
         }
 
         AxeReq1.text = "3 Stone [" + stone_count + "]";
-        AxeReq2.text = "3 Stick [" + stick_count + "]";
+        AxeReq2.text = "2 Stick [" + stick_count + "]";
 
-        if(stone_count >= 3 && stick_count >= 3)
+        SwordReq1.text = "2 Stone [" + stone_count + "]";
+        SwordReq2.text = "1 Stick [" + stick_count + "]";
+
+        if (stone_count >= 3 && stick_count >= 3)
         {
             craftBtn.gameObject.SetActive(true);
-        }else
+        }
+        else
+        {
             craftBtn.gameObject.SetActive(false);
+        }
+            
     }
 }

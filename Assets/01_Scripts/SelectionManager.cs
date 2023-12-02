@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SelectionManager : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class SelectionManager : MonoBehaviour
 
     public GameObject interaction_Info_UI;
     TextMeshProUGUI interaction_text;
+
+    public Image centerDontImage;
+    public Image handIcon;
+
+
 
     private void Start()
     {
@@ -49,11 +55,24 @@ public class SelectionManager : MonoBehaviour
                 selectedObject = interectable.gameObject;
                 interaction_text.text = interectable.GetItemName();
                 interaction_Info_UI.SetActive(true);
+
+                if (interectable.CompareTag("pickable"))
+                {
+                    centerDontImage.gameObject.SetActive(false);
+                    handIcon.gameObject.SetActive(true);
+                }
+                else
+                {
+                    centerDontImage.gameObject.SetActive(true);
+                    handIcon.gameObject.SetActive(false);
+                }
             }
             else
             {
                 onTarget = false;
                 interaction_Info_UI.SetActive(false);
+                centerDontImage.gameObject.SetActive(true);
+                handIcon.gameObject.SetActive(false);
             }
 
         }
@@ -61,6 +80,8 @@ public class SelectionManager : MonoBehaviour
         {
             onTarget = false;
             interaction_Info_UI.SetActive(false);
+            centerDontImage.gameObject.SetActive(true);
+            handIcon.gameObject.SetActive(false);
         }
     }
 }
