@@ -116,9 +116,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTrashable: 0
-  thisName: 
-  thisDescription: 
-  thisFunctionality: 
+  thisName: Axe
+  thisDescription: A sharp tool
+  thisFunctionality: Used to chop down trees
   isConsumable: 0
   healthEffect: 0
   caloriesEffect: 0

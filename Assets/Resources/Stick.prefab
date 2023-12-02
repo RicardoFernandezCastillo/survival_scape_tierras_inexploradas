@@ -116,9 +116,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTrashable: 0
-  thisName: 
-  thisDescription: 
-  thisFunctionality: 
+  thisName: Stick
+  thisDescription: A dry stick
+  thisFunctionality: A used for crafting
   isConsumable: 0
   healthEffect: 0
   caloriesEffect: 0

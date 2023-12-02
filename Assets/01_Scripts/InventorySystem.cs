@@ -9,7 +9,6 @@ public class InventorySystem : MonoBehaviour
 {
 
     public static InventorySystem Instance { get; set; }
-    public GameObject ItemInfoUI { get; set; }
 
     public GameObject inventoryScreenUI;
 
@@ -26,6 +25,7 @@ public class InventorySystem : MonoBehaviour
     public GameObject pickupAlert;
     public TextMeshProUGUI pickupName;
     public Image pickupImage;
+    public GameObject ItemInfoUI;
 
     //public bool isFull;
 

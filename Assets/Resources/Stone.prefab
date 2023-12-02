@@ -116,9 +116,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTrashable: 0
-  thisName: 
-  thisDescription: 
-  thisFunctionality: 
+  thisName: Stone
+  thisDescription: A simple Stone
+  thisFunctionality: A used for crafting
   isConsumable: 0
   healthEffect: 0
   caloriesEffect: 0
