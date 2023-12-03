@@ -13,9 +13,9 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     // --- Item Info UI --- //
     private GameObject itemInfoUI;
 
-    private TextMeshProUGUI itemInfoUI_itemName;
-    private TextMeshProUGUI itemInfoUI_itemDescription;
-    private TextMeshProUGUI itemInfoUI_itemFunctionality;
+    private Text itemInfoUI_itemName;
+    private Text itemInfoUI_itemDescription;
+    private Text itemInfoUI_itemFunctionality;
 
     public string thisName, thisDescription, thisFunctionality;
 
@@ -28,12 +28,17 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public float hydrationEffect;
 
 
+    public bool isEquippable;
+    private GameObject itemPadingEquipping;
+    public bool isNowEquipped;
+
+
     private void Start()
     {
         itemInfoUI = InventorySystem.Instance.ItemInfoUI;
-        itemInfoUI_itemName = itemInfoUI.transform.Find("itemName").GetComponent<TextMeshProUGUI>();
-        itemInfoUI_itemDescription = itemInfoUI.transform.Find("itemDescription").GetComponent<TextMeshProUGUI>();
-        itemInfoUI_itemFunctionality = itemInfoUI.transform.Find("itemFunctionality").GetComponent<TextMeshProUGUI>();
+        itemInfoUI_itemName = itemInfoUI.transform.Find("Name").GetComponent<Text>();
+        itemInfoUI_itemDescription = itemInfoUI.transform.Find("Description").GetComponent<Text>();
+        itemInfoUI_itemFunctionality = itemInfoUI.transform.Find("Functionality").GetComponent<Text>();
     }
 
     // Triggered when the mouse enters into the area of the item that has this script.
@@ -63,6 +68,12 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
                 itemPendingConsumption = gameObject;
                 consumingFunction(healthEffect, caloriesEffect, hydrationEffect);
             }
+        }
+
+        if (isEquippable && isNowEquipped == false && EquipSystem.Instance.CheckIfFull() == false)
+        {
+            EquipSystem.Instance.AddToQuickSlots(gameObject);
+            isNowEquipped = true;
         }
     }
 

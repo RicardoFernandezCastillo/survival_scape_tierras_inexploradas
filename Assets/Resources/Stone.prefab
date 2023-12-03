@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4256165930419321992}
   - component: {fileID: 5484063439384652487}
+  - component: {fileID: -6793806583559302661}
   - component: {fileID: 1387636910687839702}
   - component: {fileID: 5019365868263132420}
   - component: {fileID: 4086064924450452997}
-  - component: {fileID: -6793806583559302661}
   m_Layer: 5
   m_Name: Stone
   m_TagString: Slot
@@ -53,6 +53,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
+--- !u!114 &-6793806583559302661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8989360305545004512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd8d2c2caa86644599d08d2c0b16953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrashable: 0
+  thisName: Stone
+  thisDescription: A simple Stone
+  thisFunctionality: A used for crafting
+  isConsumable: 0
+  healthEffect: 0
+  caloriesEffect: 0
+  hydrationEffect: 0
 --- !u!222 &1387636910687839702
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -103,23 +123,3 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &-6793806583559302661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8989360305545004512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dd8d2c2caa86644599d08d2c0b16953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTrashable: 0
-  thisName: Stone
-  thisDescription: A simple Stone
-  thisFunctionality: A used for crafting
-  isConsumable: 0
-  healthEffect: 0
-  caloriesEffect: 0
-  hydrationEffect: 0

@@ -84,18 +84,18 @@ public class playerState : MonoBehaviour
 
     }
 
-    internal void setHealth(float maxHealth)
+    internal void setHealth(float newHealth)
     {
-        currentHealth += maxHealth;
+        currentHealth = newHealth;
     }
 
-    internal void setCalories(float maxCalories)
+    internal void setCalories(float newCalories)
     {
-        currentCalories += maxCalories;
+        currentCalories = newCalories;
     }
 
-    internal void setHydration(float maxHydration)
+    internal void setHydration(float newHydration)
     {
-        currentHydrationPercent += maxHydration;
+        currentHydrationPercent = newHydration;
     }
 }

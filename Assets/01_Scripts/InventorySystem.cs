@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class InventorySystem : MonoBehaviour
 {
 
+
     public static InventorySystem Instance { get; set; }
 
     public GameObject inventoryScreenUI;
@@ -25,6 +26,7 @@ public class InventorySystem : MonoBehaviour
     public GameObject pickupAlert;
     public TextMeshProUGUI pickupName;
     public Image pickupImage;
+
     public GameObject ItemInfoUI;
 
     //public bool isFull;
@@ -48,6 +50,8 @@ public class InventorySystem : MonoBehaviour
         isOpen = false;
 
         PopulateSlotList();
+
+        Cursor.visible = false;
     }
 
     private void PopulateSlotList()
@@ -70,6 +74,11 @@ public class InventorySystem : MonoBehaviour
             Debug.Log("i is pressed");
             inventoryScreenUI.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            SelectionManager.Instance.DisableSelection();
+            SelectionManager.Instance.GetComponent<SelectionManager>().enabled = false;
+
             isOpen = true;
 
         }
@@ -79,6 +88,10 @@ public class InventorySystem : MonoBehaviour
             if (!CraftingSystem.instance.isOpen)
             {
                 Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+
+                SelectionManager.Instance.EnableSelection();
+                SelectionManager.Instance.GetComponent<SelectionManager>().enabled = true;
             }
 
             isOpen = false;
@@ -94,20 +107,11 @@ public class InventorySystem : MonoBehaviour
 
         itemList.Add(itemName);
 
-        TriggerPickupPopUp(itemName, GetComponent<Image>().sprite);
-
         ReCaculateList();
         CraftingSystem.instance.RefreshNeededItems();
 
     }
 
-    void TriggerPickupPopUp(string itemName, Sprite itemSprite)
-    {
-        pickupAlert.SetActive(true);
-
-        pickupName.text = itemName;
-        pickupImage.sprite = itemSprite;
-    }
 
     private GameObject FindNextEmptySlot()
     {

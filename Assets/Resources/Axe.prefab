@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3614159934254684537}
   - component: {fileID: 4768669146039573385}
+  - component: {fileID: 6420983413540489628}
   - component: {fileID: 6392745172493145922}
   - component: {fileID: 6500106270094801990}
   - component: {fileID: 8945813735146182153}
-  - component: {fileID: 6420983413540489628}
   m_Layer: 5
   m_Name: Axe
   m_TagString: Slot
@@ -53,6 +53,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
+--- !u!114 &6420983413540489628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707269606213543027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd8d2c2caa86644599d08d2c0b16953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isTrashable: 0
+  thisName: Axe
+  thisDescription: A sharp tool
+  thisFunctionality: Used to chop down trees
+  isConsumable: 0
+  healthEffect: 0
+  caloriesEffect: 0
+  hydrationEffect: 0
 --- !u!222 &6392745172493145922
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -103,23 +123,3 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &6420983413540489628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4707269606213543027}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1dd8d2c2caa86644599d08d2c0b16953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isTrashable: 0
-  thisName: Axe
-  thisDescription: A sharp tool
-  thisFunctionality: Used to chop down trees
-  isConsumable: 0
-  healthEffect: 0
-  caloriesEffect: 0
-  hydrationEffect: 0
