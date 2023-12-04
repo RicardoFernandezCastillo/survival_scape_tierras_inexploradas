@@ -7,6 +7,8 @@ TagManager:
   - Slot
   - pickable
   - QuickSlot
+  - Ground
+  - ghost
   layers:
   - Default
   - TransparentFX
