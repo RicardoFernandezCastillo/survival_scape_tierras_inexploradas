@@ -19,6 +19,8 @@ public class AI_movement : MonoBehaviour
 
     public bool isWalking;
 
+    bool PlayerInrange;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,9 +40,18 @@ public class AI_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isWalking)
+        if (PlayerInrange)
         {
 
+        }
+        else
+        {
+            var p = GameObject.FindGameObjectWithTag("Player");
+
+        }
+        if (isWalking)
+        {
+            
             animator.SetBool("isMoving", true);
 
             walkCounter -= Time.deltaTime;
